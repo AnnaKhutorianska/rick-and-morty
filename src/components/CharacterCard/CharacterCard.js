@@ -1,23 +1,22 @@
 import React from 'react';
-import {ListItem, ListItemIcon, ListItemText} from '@mui/material'
+import { ListItem, ListItemText, IconButton } from '@mui/material'
+
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 import './CharacterCard.css';
+import { Link } from 'react-router-dom';
 
-function CharacterCard({ name, status }) {
-    // return(
-    //     <div className='character-card'>
-    //         <span>{name}</span>
-    //         <span>{status}</span>
-    //     </div>
-    // );
-
+function CharacterCard({ id, name, status }) {
     return (
-        <ListItem button>
-            {/* <ListItemIcon>
-                <StarIcon />
-            </ListItemIcon> */}
-            <ListItemText primary={`${name} ${status}`} />
-        </ListItem>
+        <Link to={`/profile/${id}`}>
+            <ListItem button>
+                <IconButton color="secondary">
+                    <FavoriteBorderIcon />
+                </IconButton>
+                <ListItemText primary={`${name} ${status}`} />
+            </ListItem>
+        </Link>
     )
 }
 

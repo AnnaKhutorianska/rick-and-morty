@@ -1,7 +1,7 @@
 import { ActionTypes } from '../constants/actionTypes';
 
 const initialState = {
-    characters: {}
+    characters: {},
 }
 
 export const charactersReducer = (state = initialState, {type, payload}) => {

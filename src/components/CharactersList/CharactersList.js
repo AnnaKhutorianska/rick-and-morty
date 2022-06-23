@@ -9,7 +9,7 @@ function CharactersList({ characters }) {
 		<div className='characters-list'>
 		<List component="nav">
 			{characters?.map(character => (
-				<CharacterCard name={character.name} status={character.status} />
+				<CharacterCard key={character.id} id={character.id} name={character.name} status={character.status} />
 			))}
 		</List>
 

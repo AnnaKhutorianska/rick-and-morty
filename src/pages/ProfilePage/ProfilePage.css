@@ -1,0 +1,15 @@
+.profile-field-label {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(40, 40, 40);
+    padding-right: 5px;
+}
+
+.profile-field-text {
+    color: rgb(80, 80, 80);
+}
+
+.profile-page-info {
+    display: flex;
+    justify-content: space-around;
+}
