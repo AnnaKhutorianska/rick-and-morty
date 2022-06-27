@@ -1,4 +1,10 @@
+.header-bgn {
+    background-color: rgb(237, 237, 237);
+    padding: 10px 0;
+}
+
 .header {
-    background-color: rgb(198, 241, 241);
-    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

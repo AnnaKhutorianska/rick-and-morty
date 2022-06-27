@@ -9,16 +9,16 @@ import ProfilePage from './pages/ProfilePage/ProfilePage';
 import './App.css';
 
 function App() {
-	return (
-		<Provider store={store}>
-			<BrowserRouter>
-        <Routes>
-          <Route exact path='/' element={<MainPage />} />
-          <Route path='/profile/:profileId' element={<ProfilePage />} />
-        </Routes>
-      </BrowserRouter>
-		</Provider>
-	);
+    return (
+        <Provider store={store}>
+            <BrowserRouter>
+                <Routes>
+                    <Route exact path="/" element={<MainPage />} />
+                    <Route path="/profile/:profileId" element={<ProfilePage />} />
+                </Routes>
+            </BrowserRouter>
+        </Provider>
+    );
 }
 
 export default App;

@@ -1,19 +1,25 @@
 import React from 'react';
 import { List } from '@mui/material';
+import { useSelector } from 'react-redux';
 import CharacterCard from '../CharacterCard/CharacterCard';
 
 import './CharactersList.css';
 
 function CharactersList({ characters }) {
+    const likes = useSelector(state => state.charactersReducer.likes);
+
 	return (
-		<div className='characters-list'>
-		<List component="nav">
+		<List component='nav'>
 			{characters?.map(character => (
-				<CharacterCard key={character.id} id={character.id} name={character.name} status={character.status} />
+				<CharacterCard 
+					key={character.id} 
+					id={character.id} 
+					name={character.name} 
+					status={character.status}
+					likes={likes}
+				/>
 			))}
 		</List>
-
-		</div>
 	);
 }
 

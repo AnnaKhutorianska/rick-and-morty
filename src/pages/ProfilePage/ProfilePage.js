@@ -1,20 +1,19 @@
 import React, { useEffect } from 'react';
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 import { getCharacter, getCharacterEpisodes } from '../../store/actions/charactersActions';
 
 import './ProfilePage.css';
 
 function ProfilePage() {
-	const { profileId } = useParams();
 	const dispatch = useDispatch();
-	const character = useSelector(state => state.characterReducer?.character);
 	const navigate = useNavigate();
-	console.log(character);
+	const { profileId } = useParams();
+	const character = useSelector(state => state.characterReducer?.character);
 
 	useEffect(() => {
 		dispatch(getCharacter(profileId))
@@ -22,7 +21,7 @@ function ProfilePage() {
 
 	useEffect(() => {
 		if (character?.episode) dispatch(getCharacterEpisodes(character.episode));
-	}, [character?.episode])
+	}, [ character?.episode ])
 
 	function getFormatedDate(created) {
 		const date = new Date(created);
@@ -88,4 +87,3 @@ function ProfilePage() {
 }
 
 export default ProfilePage;
-

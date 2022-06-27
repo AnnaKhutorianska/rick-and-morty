@@ -1,7 +1,0 @@
-.main-page {
-    height: 90vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
