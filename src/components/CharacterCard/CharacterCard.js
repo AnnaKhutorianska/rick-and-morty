@@ -7,8 +7,6 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 
 import { setLike, removeLike } from '../../store/actions/charactersActions';
 
-import './CharacterCard.css';
-
 function CharacterCard({ id, likes, name, status }) {
     const dispatch = useDispatch();
 

@@ -3,8 +3,6 @@ import { List } from '@mui/material';
 import { useSelector } from 'react-redux';
 import CharacterCard from '../CharacterCard/CharacterCard';
 
-import './CharactersList.css';
-
 function CharactersList({ characters }) {
     const likes = useSelector(state => state.charactersReducer.likes);
 

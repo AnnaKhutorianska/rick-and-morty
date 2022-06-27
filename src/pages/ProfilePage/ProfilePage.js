@@ -71,7 +71,7 @@ function ProfilePage() {
 					</p>
 
 				</div>
-				<p>
+				<div>
 					<span className='profile-field-label'>Episodes: </span>
 					<ul>
 						{character?.episodesList?.map(episode => (
@@ -80,7 +80,7 @@ function ProfilePage() {
 							</li>
 						))}
 					</ul>
-				</p>
+				</div>
 			</div>
 		</div>
 	);

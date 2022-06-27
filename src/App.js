@@ -13,8 +13,8 @@ function App() {
         <Provider store={store}>
             <BrowserRouter>
                 <Routes>
-                    <Route exact path="/" element={<MainPage />} />
-                    <Route path="/profile/:profileId" element={<ProfilePage />} />
+                    <Route exact path='/' element={<MainPage />} />
+                    <Route path='/profile/:profileId' element={<ProfilePage />} />
                 </Routes>
             </BrowserRouter>
         </Provider>
